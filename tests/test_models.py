@@ -10,10 +10,10 @@ Tests for `django-envelope-save` models module.
 
 from django.test import TestCase
 
-from django_envelope_save import models
+from envelope_save import models
 
 
-class TestDjango_envelope_save(TestCase):
+class Testenvelope_save(TestCase):
 
     def setUp(self):
         pass

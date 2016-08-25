@@ -8,7 +8,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-version = '0.1.0'
+version = '0.2.0'
 
 if sys.argv[-1] == 'publish':
     try:
@@ -39,7 +39,7 @@ setup(
     author_email='david@launchlab.com.au',
     url='https://github.com/LaunchlabAU/django-envelope-save',
     packages=[
-        'django_envelope_save',
+        'envelope_save',
     ],
     include_package_data=True,
     install_requires=["django-model-utils>=2.0",],

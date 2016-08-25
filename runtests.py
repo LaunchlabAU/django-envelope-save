@@ -12,12 +12,12 @@ try:
                 "ENGINE": "django.db.backends.sqlite3",
             }
         },
-        ROOT_URLCONF="django_envelope_save.urls",
+        ROOT_URLCONF="envelope_save.urls",
         INSTALLED_APPS=[
             "django.contrib.auth",
             "django.contrib.contenttypes",
             "django.contrib.sites",
-            "django_envelope_save",
+            "envelope_save",
         ],
         SITE_ID=1,
         MIDDLEWARE_CLASSES=(),

@@ -24,7 +24,7 @@ Install Django Envelope Save::
 
 Then use it in a project::
 
-    import django_envelope_save
+    import envelope_save
 
 Features
 --------
