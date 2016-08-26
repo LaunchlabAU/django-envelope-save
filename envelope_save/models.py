@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.dispatch import receiver
+from envelope.forms import ContactForm
 from envelope.signals import before_send
 from model_utils.models import TimeStampedModel
 
@@ -17,6 +18,8 @@ class Contact(TimeStampedModel):
 
 @receiver(before_send)
 def save_contact(sender, **kwargs):
-    return Contact.objects.create(sender=kwargs['form'].data['sender'],
-                                   email=kwargs['form'].data['email'],
-                                   message=kwargs['form'].data['message'])
+    if isinstance(kwargs['form'], ContactForm):
+        Contact.objects.create(sender=kwargs['form'].data['sender'],
+                               email=kwargs['form'].data['email'],
+                               message=kwargs['form'].data['message'])
+    return True
